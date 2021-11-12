@@ -18,7 +18,7 @@ async fn health_check_works() {
 }
 
 // Launch our application in the background ~somehow~
-fn spawn_app()  {
+fn spawn_app() {
     let server = email_newsletter::run().expect("Failed to bind address");
     let _ = tokio::spawn(server);
 }
